@@ -1,0 +1,119 @@
+<?php
+$mysqli = new mysqli("localhost","root"," ","prescious");
+
+// Check connection
+if ($mysqli -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+  exit();
+}
+
+// Perform query
+if ($result = $mysqli -> query("SELECT * FROM Persons")) {
+  echo "Returned rows are: " . $result -> num_rows;
+  // Free result set
+  $result -> free_result();
+}
+
+$mysqli -> close();
+?>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <title>Prescious Clothing Store</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body>
+        <link rel="stylesheet" href="css/mystyle.css">
+        </head>
+
+        <body>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand text-uppercase text-success" href="#"><strong>Prescious Clothing Store</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-info" href="#"><strong>Home</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="#"><strong>Features</strong></a>
+                        </li>
+
+                    </ul>
+                    <span class="navbar-text text-success">
+                <strong>The Quality Cheapest Clothes...</strong>
+              </span>
+                </div>
+            </nav>
+
+            <br/>
+
+
+            <div class="container mt-4">
+
+                <div class="card bg-secondary">
+                    <div class="card-body">
+                        <h2 class="text-center text-white text-uppercase"><strong>Products on Special</strong></h2>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body bg-light">
+                                <h5 class="card-title">Mens Jackets </h5>
+                                <img src="images1111.jpg" width="200">
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-warning">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <br /><br /><br/>
+            <!-- Footer -->
+            <section id="footer">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                            <ul class="list-unstyled list-inline social text-center">
+                                <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-google-plus"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                            <p class="h6">&copy; All Right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank"> Prescious Clothing Store</a> | Designed and Managed By Prescious Mokgoebo</p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </section>
+            <!-- ./Footer -->
+        </body>
+
+    </html>
